@@ -1,1 +1,2 @@
-# web-dev-zhdk-2019
+# ZHdK – Web Development 2019
+Repo to share course material and example codes.
