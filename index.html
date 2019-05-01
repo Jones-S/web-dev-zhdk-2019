@@ -4,11 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Examples Overview</title>
+  
+  <!-- A little example of not using a separate css file -->
+  <style>
+    html,
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 20px;
+    }
+    
+    a {
+      color: #1758ff;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    a:hover {
+      color: #0938b3;
+      transform: translateY(-5%);
+      display: inline-block;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>See examples live</h1>
-  <h2>Using github pages we can host pages directly</h2>
+  <h1>Web Dev ZHdK 2019</h1>
+  <h2>Examples</h2>
+  <h3>Using <a href="https://pages.github.com/">github pages</a> we can host pages directly</h3>
   <ol>
     <li>
       <a href="./examples/basic-page/index.html" target="_blank">Basic Page structure</a>
