@@ -1,0 +1,39 @@
+html,
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+a {
+  color: #8964c9;
+}
+
+a:hover {
+  color: #ff264d;
+}
+
+/* ids override classes due to higher specificity */
+#unique-title {
+  color: #499f72;
+}
+
+.main-title {
+  color: #3e3e3e;
+}
+
+/* chained classes will override following styling due to higher specificity */
+.small-title.extra-styling {
+  color: #01b499;
+}
+
+.subtitle,
+.small-title {
+  font-style: italic;
+  color: #5e89d1;
+}
+
+.extra-styling {
+  font-style: normal; /* overrides small-titles font-style setting */
+  color: #06388c;
+  text-decoration: underline;
+}
