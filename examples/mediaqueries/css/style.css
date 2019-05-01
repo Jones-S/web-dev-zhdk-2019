@@ -1,0 +1,55 @@
+html,
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.main-title {
+  font-size: 30px;
+}
+
+.main-title::after {
+  content: '< 720px';
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 12px;
+  color: #ff3c3c;
+}
+
+.responsive-text {
+  font-size: 10px;
+  color: black;
+}
+
+/* Mobile-first approach: Starting with the lowest screen size (default)
+override rules as screens get bigger */
+
+@media (min-width: 720px) {
+  .main-title {
+    font-size: 40px;
+  }
+  
+  .main-title::after {
+    content: 'min. 720px';
+  }
+  
+  .responsive-text {
+    font-size: 20px;
+    color: #464646;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-title {
+    font-size: 50px;
+  }
+  
+  .main-title::after {
+    content: 'min. 1200px';
+  }
+  
+  .responsive-text {
+    font-size: 30px;
+    color: #6b6969;
+  }
+}
