@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Positioning</title>
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1 class="main-title">Positions</h1>
+  
+  <div class="box green">
+    <div class="box blue">
+      Position: normal
+    </div>
+    <div class="box blue relative">
+      Position: relative (to normal position)
+    </div>
+  </div>
+  
+  <div class="box green">
+    <div class="absolute">
+      Absolutely positioned (to parent)
+    </div>
+  </div>
+  
+  <p>
+    Just filler text:<br>
+    The <position> data type is specified with one or two keywords, with optional offsets. The keyword values are center, top, right, bottom, and left. Each keyword represents either an edge of the element's box or the center line between two edges. Depending on the context, center represents either the center between the left and right edges, or the center between the top and bottom edges. If specified, an offset can be either a relative <percentage> value or an absolute <length> value. Positive values are offset towards the right or the bottom, whichever is appropriate. Negative values are offset in the opposite directions. If only a single offset value is specified, it defines the x-coordinate, with the value for the other axis defaulting to center.
+  </p>
+  
+  
+<div class="box fixed">
+  Fix at specific position
+</div>
+  
+</body>
+</html>

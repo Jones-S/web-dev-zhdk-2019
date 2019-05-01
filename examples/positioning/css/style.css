@@ -1,0 +1,53 @@
+html,
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.box {
+  padding: 10px;
+  position: relative;
+  height: 50px;  
+  margin-bottom: 20px;
+}
+
+.green {
+  background-color: #67eba4;
+  height: 100px;
+  opacity: 0.8;
+}
+
+.blue {
+  background-color: #7a9fe8;
+  width: 40%;
+  float: left;
+  margin-right: 10px;
+}
+
+.relative {
+  position: relative;
+  top: 20px;
+}
+
+.fixed {
+  position: fixed;
+  font-size: 10px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.fixed {
+  background-color: #03a7ad;
+  top: 0;
+  left: 300px;
+}
+
+.absolute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #405d5b;
+  color: white;
+  padding: 5px;
+}
+

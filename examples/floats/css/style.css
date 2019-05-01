@@ -1,0 +1,35 @@
+html,
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.box {
+  background-color: #69a6cd;
+  margin: 10px 20px 5px 20px; /* top right bottom left */
+  padding: 10px;
+  padding-top: 30px;
+  border: 3px solid #f6d14c;
+  width: 500px;
+  max-width: 80%;
+}
+
+.floating {
+  float: left;
+  width: 150px;
+  height: 40px;
+}
+
+/* Using a pseudo-element to clear floats */
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0px;
+}
+
+.border-box {
+  box-sizing: border-box;
+  padding: 30px;
+}
