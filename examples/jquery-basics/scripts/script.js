@@ -97,13 +97,13 @@ $(document).ready(function() {
   /*
    * 07: Add HTML to DOM
    * Read more: https://api.jquery.com/append
-   * Using a multiline HTML string with ECMA-Script 6
+   * Using a multiline HTML string with ECMAScript 6
    * template strings.
    * Read more: https://jack.ofspades.com/multiline-strings-in-es6-javascript/index.html
    */
   
   // Function to create content HTML string
-  createContent = function(title, text) {
+  function createContent(title, text) {
     return `
     <div class="new-content-wrapper">
     <h2>${title}</h2>
