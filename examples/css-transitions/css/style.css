@@ -1,0 +1,41 @@
+html,
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  background-color: black;
+}
+
+.box {
+  background-color: rgb(241, 245, 33);
+  border-radius: 5px;
+  width: 400px;
+  height: 200px;
+  margin: 40px auto;
+  transition: background-color 1s ease-in-out, width 0.3s linear;
+}
+
+.box:hover {
+  background-color: rgb(255, 120, 33);
+  width: 460px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 60px auto;
+  position: relative;
+  /* @keyframes duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+  animation: 1s linear 0s infinite alternate animate;
+}
+
+@keyframes animate {
+    from {
+      left: -200px;
+      background-color: rgb(255, 181, 93);
+    }
+    to {
+      left: 200px;
+      background-color: rgb(255, 244, 93);
+    }
+}
