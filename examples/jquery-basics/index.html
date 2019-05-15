@@ -11,6 +11,11 @@
   -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./scripts/script.js"></script>
+  
+  <!-- To use CSS framework bootstrap, we need to import their stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <!-- Importing our own stylesheet -->
   <link href="./css/style.css" rel="stylesheet">
 </head>
 
@@ -18,24 +23,42 @@
 
   <h1>jQuery Examples</h1>
   
-  <div class="box">
-    Box 1
-  </div>
-  <div class="box">
-    Box 2
-  </div>
+  <div class="box"></div>
+  <div class="box"></div>
   
-  <button type="button" name="button" id="fadeButton">
+  <hr />
+  
+  <button type="button" class="btn btn-secondary" name="button" id="fadeButton">
     Click to Fade
   </button>
   
   <div id="divToFade" class="box"></div>
+  
+  <hr />
     
-  <button type="button" name="button" id="changeColorButton">
+  <button type="button" class="btn btn-secondary" name="button" id="changeColorButton">
     Click to change color
   </button>
-    
   
+  <div id="divToDye" class="box"></div>
+  
+  <hr />
+  
+  <button type="button" class="btn btn-secondary" name="button" id="toggleClass">
+    Click to toggle Class
+  </button>
+  
+  <!-- 
+  Best practice: Don't use normal classes to find elements with javascript  – 
+  Read more: https://intu.io/blog/dont-use-data-attributes-to-find-html-elements-with-js/
+  We could use data-attributes, but we stick to prefixed classes
+  -->
+  <div>
+    <div class="js-toggle-class-target box box--small"></div>
+    <div class="js-toggle-class-target box box--small"></div>
+    <div class="js-toggle-class-target box box--small"></div>
+  </div>
+    
 </body>
 
 </html>
