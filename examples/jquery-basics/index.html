@@ -24,7 +24,6 @@
   <h1>jQuery Examples</h1>
   
   <div class="box"></div>
-  <div class="box"></div>
   
   <hr />
   
@@ -53,11 +52,39 @@
   Read more: https://intu.io/blog/dont-use-data-attributes-to-find-html-elements-with-js/
   We could use data-attributes, but we stick to prefixed classes
   -->
-  <div>
+  <div class="clearfix">
     <div class="js-toggle-class-target box box--small"></div>
     <div class="js-toggle-class-target box box--small"></div>
     <div class="js-toggle-class-target box box--small"></div>
   </div>
+  
+  <hr />
+  
+  <button type="button" class="btn btn-secondary" name="button" id="replaceContent">
+    Click to replace content
+  </button>
+  
+  <div class="js-replace-content content-box">
+    <p>This will be replaced...</p>
+  </div>
+  
+  <hr />
+  
+  <button type="button" class="btn btn-secondary" name="button" id="addContent">
+    Click to add content
+  </button>
+  
+  <div class="js-add-content content-box">
+    <p>Here we will add new content...</p>
+  </div>
+  
+  <hr />
+  
+  <button type="button" class="btn btn-secondary" name="button" id="removeDiv">
+    Click remove div
+  </button>
+  
+  <div id="divToRemove" class="box"></div>
     
 </body>
 

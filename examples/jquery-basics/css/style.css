@@ -11,11 +11,16 @@ h1 {
   margin-bottom: 1em;
 }
 
+button {
+  margin: 2em 0;
+}
+
 .box {
   background-color: rgb(0, 140, 255);
   width: 200px;
   height: 200px;
   margin-bottom: 10px;
+  border-radius: 3px;
   /* property name | duration | timing function */
   transition: background-color 1s ease-in-out, border 0.5s linear;  
 }
@@ -33,6 +38,25 @@ h1 {
   background-color: rgb(143, 1, 241);
 }
 
-button {
-  margin: 2em 0;
+.box--tiny {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(50, 55, 71);
+  margin-right: 10px;
+}
+
+.box-wrapper {
+  display: flex;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.content-box {
+  border-radius: 3px;
+  background-color: rgb(224, 224, 224);
+  height: 400px;
+  margin: 0;
+  padding: 20px;
 }
