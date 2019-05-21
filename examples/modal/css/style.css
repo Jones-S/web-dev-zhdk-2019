@@ -52,6 +52,8 @@ body {
   transform: none;
 }
 
+/* This selector is needed to override the pretty specific selector ".nav.is-open .nav-item "
+ above, which sets transform to none */
 .nav.is-open .nav-item:hover {
   transform: translateX(0.3em);
 }
