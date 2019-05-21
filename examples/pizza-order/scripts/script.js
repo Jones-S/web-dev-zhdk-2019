@@ -35,7 +35,7 @@ $(document).ready(function() {
   ];
   
   function displayIngredients(ingredients) {
-    // loop over ingredients
+    // loop over ingredients that are passed into function
     for (var i = 0; i < ingredients.length; i++) {
       var $populatedTemplate = $(populateTemplate(ingredients[i]));
       $('#ingredients-wrapper').append($populatedTemplate);
@@ -43,13 +43,16 @@ $(document).ready(function() {
     
     // fade in all items in a staggered appear animation
     var $hiddenIngredients = $('#ingredients-wrapper').children();
-    
     console.log('hiddenIngredients: ', $hiddenIngredients)
+    
+    // jquerys .each method allows to use another way of looping over objects
     $hiddenIngredients.each(function(index) {
       // this refers to each single item included in hiddenIngredients
       var $item = $(this);
       console.log('this: ', $(this));
       
+      // JavaScript's native setTimeout function allows to execute a function with a given delay
+      // by increasing the delay each time, we get a staggered class removal
       setTimeout(function() {
         $item.removeClass('is-hidden');
       }, index * 100);
@@ -57,6 +60,7 @@ $(document).ready(function() {
   }
   
   function populateTemplate(ingredient) {
+    // Using template literals, we can return a nicely populated template
     var template = `<li class="js-ingredient ingredient is-hidden">
       <span class="js-ingredient-name ingredient-name">${ingredient.name}</span>
       <div>
@@ -69,17 +73,21 @@ $(document).ready(function() {
   }
   
   function calculateTotalPrice($ingredients) {
-    var totalPrice = 0;
+    var totalPrice = 0; // initally 0 CHF
     
     // jquerys $(selector).each is just like a javascript loop
     // looping over all ingredients
     $ingredients.each(function() {
-      // this refers to each single item included in hiddenIngredients
+      // this refers to each single item included in $ingredients
       console.log('this: ', this);
+      // jquerys find() method allows to parse all children of a given jquery object
+      // here we look for all nodes with the class ".js-ingredient-price" and take it's content
+      // with jquerys .html() method
       var price = $(this).find('.js-ingredient-price').html();
       
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
       var priceAsNumber = parseFloat(price, 10);
+      // each time we add the price to the total price
       totalPrice = totalPrice + priceAsNumber;
     });
     
@@ -116,14 +124,14 @@ $(document).ready(function() {
     $('#price-amount').html(`<strong>${formattedPrice} CHF</strong>`);
   }
   
-  function displaySelectedIngredients(ingredients) {
+  function displaySelectedIngredients($ingredients) {
     var container = $('.js-final-ingredients');
     
-    // clearing list
+    // clearing list, to remove earlier added items
     container.html('');
     
     // add a list item for each selected ingredient
-    ingredients.each(function() {
+    $ingredients.each(function() {
       // retrieve the name of the item
       var ingredientName = $(this).find('.js-ingredient-name').html();
       console.log('ingredientName: ', ingredientName);
@@ -136,7 +144,7 @@ $(document).ready(function() {
   
   $('#calculate-price-button').click(function() {
     // prepending a variable name with a $-sign is good practice
-    // to mark with variables contain jQuery objects.
+    // to mark variables that contain jQuery objects.
     // https://stackoverflow.com/questions/205853/why-would-a-javascript-variable-start-with-a-dollar-sign
     var $selectedIngredients = getSelectedIngredients();
     var price = calculateTotalPrice($selectedIngredients);
