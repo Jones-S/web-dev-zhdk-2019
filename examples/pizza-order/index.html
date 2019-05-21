@@ -13,48 +13,34 @@
 </head>
 
 <body>
-  <div class="ingredients-wrapper" id="ingredients-wrapper">
-    <!-- In here I will generate a few ingredients via javascript -->
-    <ul class="ingredients">
+  <div class="ingredients-wrapper">
+    
+    <!-- This template is hidden but used as a template for javascript -->
+    <div class="hidden-ingredient-template" id="template">
       <li class="js-ingredient ingredient">
         <span class="js-ingredient-name ingredient-name">Salami</span>
         <div>
           <span class="js-ingredient-price ingredient-price">2.50</span> <span class="ingredient-currency">CHF</span>
         </div>
         <input class="js-checkbox" type="checkbox" id="Salami" name="select" value="selected">
-        <label class="ingredient-checkbox-label" for="Salami">Select</label>
+        <label class="js-ingredient-checkbox-label ingredient-checkbox-label" for="Salami">Select</label>
       </li>
-      <li class="js-ingredient ingredient">
-        <span class="js-ingredient-name ingredient-name">Salami</span>
-        <div>
-          <span class="js-ingredient-price ingredient-price">2.50</span> <span class="ingredient-currency">CHF</span>
-        </div>
-        <input class="js-checkbox" type="checkbox" id="Salami" name="select" value="selected">
-        <label class="ingredient-checkbox-label" for="Salami">Select</label>
-      </li>
-      
-      <li class="js-ingredient ingredient">
-        <span class="js-ingredient-name ingredient-name">Salami</span>
-        <span class="ingredient-price">2.00 CHF</span>
-      </li>
-      <li class="js-ingredient ingredient">
-        <span class="ingredient-name">Salami</span>
-        <span class="js-ingredient-price ingredient-price">2.00 CHF</span>
-      </li>
+    </div>
+
+    <ul class="ingredients" id="ingredients-wrapper">
+      <!-- In here I will generate a few ingredients via javascript -->
     </ul>
     
-    <button class="btn btn-secondary" id="calculate-price-button">
-      Calculate total price
-    </button>
+    <button class="btn btn-secondary" id="calculate-price-button">Calculate total price</button>
     
     <div class="your-pizza">
       <p class="pizza-description">
         You ordered a pizza containing:
       </p>
+      
       <ul class="js-final-ingredients">
-        <li class="chosen-ingredient">Salami</li>
-        <li class="chosen-ingredient">Mozzarella</li>
       </ul>
+      
       <p class="total-price">
         This will cost you: <span class="price-amount" id="price-amount"></span>.
       </p>
