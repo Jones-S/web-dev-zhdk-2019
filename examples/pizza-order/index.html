@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chose your pizza ingredients</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="./css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./scripts/script.js"></script>
+</head>
+
+<body>
+  <div class="ingredients-wrapper" id="ingredients-wrapper">
+    <!-- In here I will generate a few ingredients via javascript -->
+    <ul class="ingredients">
+      <li class="js-ingredient ingredient">
+        <span class="ingredient-name">Salami</span>
+        <div>
+          <span class="js-ingredient-price ingredient-price">2.50</span> <span class="ingredient-currency">CHF</span>
+        </div>
+        <input class="js-checkbox" type="checkbox" id="Salami" name="select" value="selected">
+        <label class="ingredient-checkbox-label" for="Salami">Select</label>
+      </li>
+      <li class="js-ingredient ingredient">
+        <span class="ingredient-name">Salami</span>
+        <div>
+          <span class="js-ingredient-price ingredient-price">2.50</span> <span class="ingredient-currency">CHF</span>
+        </div>
+        <input class="js-checkbox" type="checkbox" id="Salami" name="select" value="selected">
+        <label class="ingredient-checkbox-label" for="Salami">Select</label>
+      </li>
+      
+      <li class="js-ingredient ingredient">
+        <span class="ingredient-name">Salami</span>
+        <span class="ingredient-price">2.00 CHF</span>
+      </li>
+      <li class="js-ingredient ingredient">
+        <span class="ingredient-name">Salami</span>
+        <span class="js-ingredient-price ingredient-price">2.00 CHF</span>
+      </li>
+    </ul>
+    
+    <button class="btn btn-secondary" id="calculate-price-button">
+      Calculate total price
+    </button>
+    
+    <div class="your-pizza">
+      <p class="pizza-description">
+        You ordered a pizza containing:
+      </p>
+      <ul class="js-final-ingredients">
+        <li class="chosen-ingredient">Salami</li>
+        <li class="chosen-ingredient">Mozzarella</li>
+      </ul>
+      <p class="total-price">
+        This will cost you: <span class="price-amount" id="price-amount"></span>.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

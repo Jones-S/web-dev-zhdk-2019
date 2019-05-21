@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: rgb(226, 226, 226);
+}
+
+ul {
+  list-style: none;
+}
+
+.ingredients-wrapper {
+  max-width: 900px;
+  width: 90%;
+  margin: 1rem auto 0;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredient {
+  background-color: rgb(233, 90, 90);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.ingredient-name {
+  display: block;
+}
+
+.ingredient-checkbox-label {
+  font-size: 0.8rem;
+  position: relative;
+  top: 0.05em;
+}
+
+.ingredient-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.pizza-description {
+  margin-top: 1rem;
+}
