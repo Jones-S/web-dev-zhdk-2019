@@ -8,15 +8,7 @@ $(document).ready(function() {
     }
   ]
   
-  function calculateTotalPrice() {
-    var selectedIngredients = getSelectedIngredients();
-    console.log('selectedIngredients: ', selectedIngredients);
-    
-    var totalPrice = addPrices(selectedIngredients);
-    return totalPrice;
-  }
-  
-  function addPrices(ingredients) {
+  function calculateTotalPrice(ingredients) {
     var totalPrice = 0;
     
     // jquerys $(selector).each is just like a javascript loop
@@ -63,10 +55,30 @@ $(document).ready(function() {
     $('#price-amount').html(`<strong>${formattedPrice} CHF</strong>`);
   }
   
+  function displaySelectedIngredients(ingredients) {
+    var container = $('.js-final-ingredients');
+    
+    // clearing list
+    container.html('');
+    
+    // add a list item for each selected ingredient
+    ingredients.each(function() {
+      // retrieve the name of the item
+      var ingredientName = $(this).find('.js-ingredient-name').html();
+      console.log('ingredientName: ', ingredientName);
+      // create list item HTML
+      var listHTML = `<li class="chosen-ingredient">${ingredientName}</li>`;
+      // and add it at the end of the ul
+      container.append(listHTML);
+    })
+  }
+  
   $('#calculate-price-button').click(function() {
-    var price = calculateTotalPrice();
+    var selectedIngredients = getSelectedIngredients();
+    var price = calculateTotalPrice(selectedIngredients);
     console.log('price: ', price);
     
     displayPriceOnScreen(price);
+    displaySelectedIngredients(selectedIngredients);
   })
 });
