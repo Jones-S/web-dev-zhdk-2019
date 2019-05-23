@@ -10,7 +10,6 @@ $(document).ready(function() {
   function showNavigation() {
     navigation.toggleClass('is-open');
   }
-  
 
   burger.click(function(event) {
     transformBurgerIcon();
