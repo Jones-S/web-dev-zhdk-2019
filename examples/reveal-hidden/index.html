@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Reveal hidden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./scripts/script.js"></script>
+</head>
+
+<body>
+  
+  <div class="container">
+    <h2>Reveal items by click</h2>
+    <div class="item">
+      <span>Camera</span>
+      <button class="js-button" data-item="camera">Add to cart</button>
+    </div>
+    <div class="item">
+      <span>Harddisk</span>
+      <button class="js-button" data-item="harddisk">Add to cart</button>
+    </div>
+    <div class="item">
+      <span>Washing machine</span>
+      <button class="js-button" data-item="washing-machine">Add to cart</button>
+    </div>
+    
+    <div class="cart">
+      <h2 class="heading2">My cart</h2>
+      <ul class="cart-items">
+        <li class="is-hidden cart-item" id="camera">A self shooting Camera</li>
+        <li class="is-hidden cart-item" id="harddisk">A good old Harddisk</li>
+        <li class="is-hidden cart-item" id="washing-machine">An automated washing machine</li>
+      </ul>
+    </div>
+  </div>
+  
+</body>
+</html>
