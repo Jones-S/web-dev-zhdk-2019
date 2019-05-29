@@ -8,3 +8,33 @@ body {
   font-family: 'Helvetica', sans-serif;
   font-size: 20px;
 }
+
+h2 {
+  margin-bottom: 1em;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.items {
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.cart {
+  background-color: #000;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 150px;
+  margin-top: 20px;
+  padding: 10px;
+  /* Adjusts the box model to behave like we want it to: */
+  box-sizing: border-box; 
+}
+
+.heading2 {
+  color: #fff;
+}
